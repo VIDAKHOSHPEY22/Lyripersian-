@@ -1,119 +1,3 @@
-
-            letter-spacing: 2px;
-        }
-        
-        .album-info {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .album-cover {
-            width: 80px;
-            height: 80px;
-            border-radius: 10px;
-            background: linear-gradient(45deg, #4361ee, #3a0ca3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .album-text {
-            text-align: left;
-        }
-        
-        .album-text h2 {
-            font-size: 1.4rem;
-            color: #f72585;
-            margin-bottom: 5px;
-        }
-        
-        .lyrics-container {
-            padding: 30px;
-        }
-        
-        .lyrics-section {
-            margin-bottom: 40px;
-        }
-        
-        .lyrics-block {
-            margin-bottom: 25px;
-            padding: 15px;
-            border-radius: 12px;
-            background: rgba(30, 41, 59, 0.5);
-            transition: all 0.3s ease;
-            border-left: 3px solid #4361ee;
-        }
-        
-        .lyrics-block:hover {
-            background: rgba(30, 41, 59, 0.8);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .english-line {
-            font-size: 1.4rem;
-            font-weight: 500;
-            margin-bottom: 8px;
-            color: #fff;
-            line-height: 1.5;
-        }
-        
-        .persian-line {
-            font-size: 1.2rem;
-            color: #a5b4fc;
-            padding-right: 15px;
-            border-right: 2px solid #f72585;
-            direction: rtl;
-            font-family: Tahoma, Arial, sans-serif;
-        }
-        
-        .chorus {
-            color: #4cc9f0;
-            font-weight: 600;
-        }
-        
-        .highlight {
-            color: #f72585;
-            font-weight: 600;
-        }
-        
-        .section-divider {
-            text-align: center;
-            margin: 30px 0;
-            position: relative;
-        }
-        
-        .section-divider:before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #4cc9f0, transparent);
-        }
-        
-        .section-divider span {
-            background: rgba(15, 23, 42, 0.9);
-            padding: 0 20px;
-            position: relative;
-# حل مشکل پخش‌کننده آهنگ و مرکزسازی
-
-من کد شما را بررسی کردم و دو مشکل اصلی وجود دارد:
-1. پخش‌کننده آهنگ به جای مرکز در سمت چپ قرار دارد
-2. آهنگ لود نمی‌شود (احتمالاً مشکل مسیر فایل)
-
-در اینجا کد کامل و اصلاح شده را ارائه می‌دهم که شامل:
-- پخش‌کننده آهنگ زیبا و مرکز شده
-- استایل‌های بهبود یافته
-- آهنگ نمونه برای تست (با لینک آنلاین)
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -134,14 +18,10 @@
             line-height: 1.6;
             padding: 20px;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
         
         .container {
             max-width: 800px;
-            width: 100%;
             margin: 0 auto;
             background: rgba(15, 23, 42, 0.8);
             border-radius: 20px;
@@ -201,53 +81,6 @@
             font-size: 1.4rem;
             color: #f72585;
             margin-bottom: 5px;
-        }
-        
-        /* استایل جدید برای پخش‌کننده */
-        .audio-container {
-            padding: 20px;
-            text-align: center;
-            background: rgba(15, 23, 42, 0.9);
-            border-bottom: 2px solid #f72585;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .custom-audio-player {
-            width: 90%;
-            max-width: 500px;
-            background: rgba(30, 41, 59, 0.8);
-            border-radius: 15px;
-            padding: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(76, 201, 240, 0.3);
-        }
-        
-        .custom-audio-player audio {
-            width: 100%;
-            outline: none;
-        }
-        
-        .custom-audio-player audio::-webkit-media-controls-panel {
-            background: rgba(30, 41, 59, 0.8);
-            border-radius: 10px;
-        }
-        
-        .custom-audio-player audio::-webkit-media-controls-play-button {
-            background-color: #4cc9f0;
-            border-radius: 50%;
-        }
-        
-        .custom-audio-player audio::-webkit-media-controls-current-time-display,
-        .custom-audio-player audio::-webkit-media-controls-time-remaining-display {
-            color: white;
-        }
-        
-        .audio-info {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: #94a3b8;
         }
         
         .lyrics-container {
@@ -350,10 +183,6 @@
             .lyrics-container {
                 padding: 20px 15px;
             }
-            
-            .custom-audio-player {
-                padding: 10px;
-            }
         }
     </style>
 </head>
@@ -371,18 +200,6 @@
             </div>
         </header>
         
-        <!-- پخش‌کننده آهنگ مرکز شده و زیبا -->
-        <div class="audio-container">
-            <div class="custom-audio-player">
-                <audio controls>
-                    <!-- استفاده از آهنگ نمونه برای تست -->
-                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-                    مرورگر شما از پخش‌کننده صوتی پشتیبانی نمی‌کند.
-                </audio>
-                <div class="audio-info">NF - HOE (Official Audio)</div>
-            </div>
-        </div>
-
         <div class="lyrics-container">
             <div class="lyrics-section">
                 <div class="lyrics-block">
@@ -880,7 +697,7 @@
         
         <footer>
             <p>NF - HOPE | Lyrics with Persian Translation</p>
-            <p>© 2025 | Created with ❤️ for music lovers VY</p>
+            <p>© 2023 | Created with ❤️ for music lovers</p>
         </footer>
     </div>
 </body>
