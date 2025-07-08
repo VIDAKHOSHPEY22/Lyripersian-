@@ -184,6 +184,31 @@
                 padding: 20px 15px;
             }
         }
+        .audio-player {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.audio-player audio {
+    width: 80%;
+    max-width: 400px;
+    background: rgba(30, 41, 59, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.audio-player audio::-webkit-media-controls-panel {
+    background: rgba(30, 41, 59, 0.7);
+    border-radius: 10px;
+}
+
+.audio-player audio::-webkit-media-controls-play-button,
+.audio-player audio::-webkit-media-controls-volume-slider,
+.audio-player audio::-webkit-media-controls-timeline {
+    filter: invert(0.8);
+}
     </style>
 </head>
 <body>
@@ -199,6 +224,12 @@
                 </div>
             </div>
         </header>
+        <div class="audio-container">
+    <audio controls>
+        <source src="HOPE.mp3" type="audio/mpeg">
+        مرورگر شما از پخش‌کننده صوتی پشتیبانی نمی‌کند.
+    </audio>
+</div>
         
         <div class="lyrics-container">
             <div class="lyrics-section">
