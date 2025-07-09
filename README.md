@@ -284,3 +284,6 @@
 
 ## I’m taking the reins  
 دارم افسار رو می‌گیرم
+
+📲 [Join our Telegram channel for more lyrics & translations!](https://t.me/LyriPersian)
+
